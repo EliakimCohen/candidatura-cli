@@ -40,19 +40,4 @@ Os testes verificam persistência, datas inválidas, campos vazios, filtros, atu
 - Datas usam ISO 8601. Os status são `enviada`, `entrevista`, `oferta` e `encerrada`.
 - CSV neutraliza prefixos de fórmula em campos textuais.
 
-`candidaturas.py` reúne persistência e CLI para facilitar a leitura inicial; os testes ficam separados. Não envia currículos nem consulta empresas. O banco é local e não tem criptografia.
-
-## Evolua o projeto
-
-- Adicionar URL da vaga e observações com uma migração do banco.
-- Criar histórico de mudanças de status.
-- Adicionar busca por empresa e testes para acentos.
-
-## Para explicar numa entrevista
-
-1. Por que SQLite em vez de uma lista em memória?
-2. O que os parâmetros SQL protegem?
-3. O que acontece quando uma candidatura não existe?
-4. Como testar sem modificar o banco do usuário?
-
-Projeto de estudo preparado com apoio de IA para evolução prática. Exemplos fictícios.
+`candidaturas.py` contém a interface de linha de comando e a camada de persistência. Os testes ficam em `tests/`. Não envia currículos nem consulta empresas. O banco é local e não tem criptografia.
